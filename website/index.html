@@ -8,6 +8,11 @@
       href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap"
       rel="stylesheet"
     />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>The Road</title>
   </head>
@@ -20,17 +25,19 @@
         <div class="line"></div>
       </div>
       <div class="navbar-wrapper">
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="close-navbar-icon navbar-icon center">
             <div class="line line-1"></div>
             <div class="line line-2"></div>
           </div>
           <div class="nav-list">
-            <a href="#" class="nav-link center">Home</a>
-            <a href="#" class="nav-link center">Tours</a>
-            <a href="#" class="nav-link center">About Us</a>
-            <a href="#" class="nav-link center">Offer</a>
-            <a href="#" class="nav-link center">Contact</a>
+            <!-- Updated navbar with Bootstrap classes -->
+            <a href="#home" class="nav-link center">Home</a>
+            <a href="#tours" class="nav-link center">Tours</a>
+            <a href="#about" class="nav-link center">About Us</a>
+            <a href="#offer" class="nav-link center">Offer</a>
+            <a href="#joinus" class="nav-link center">Join Us</a>
+            <a href="#contact" class="nav-link center">Contact</a>
           </div>
         </nav>
       </div>
@@ -64,8 +71,22 @@
       </header>
       <!-- End of Header -->
 
+      <!-- About Us Section -->
+      <section id="about" class="about-us">
+        <div class="about-wrapper">
+          <h1 class="about-heading">About Us</h1>
+          <p class="about-paragraph">
+            We are a travel agency that aims to provide exceptional experiences for our clients. Whether you're looking for a thrilling adventure in the wild or a relaxing getaway on a sunny beach, we offer a range of tours to suit your preferences.
+          </p>
+          <p class="about-paragraph">
+            Our mission is to create memorable experiences that inspire, challenge, and refresh. We believe in creating sustainable tourism that benefits both travelers and the local communities we visit.
+          </p>
+        </div>
+      </section>
+      <!-- End of About Us -->
+
       <!-- Popular tours -->
-      <section class="popular-tours">
+      <section id="tours" class="popular-tours">
         <h1 class="popular-tours-heading">The Most Popular Tours</h1>
         <div class="cards-wrapper">
           <div class="card">
@@ -129,62 +150,47 @@
       </section>
       <!-- End of Popular tours -->
 
-      <!-- Stories -->
-      <section class="stories">
-        <div class="video-container">
-          <video class="bg-video" autoplay muted loop>
-            <source src="https://i.imgur.com/eFQiGDl.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="stories-wrapper">
-          <div class="story-bg">
-            <div class="story">
-              <img
-                src="images/story-img-1.jpg"
-                alt="Customer image"
-                class="story-image"
+      <!-- Join Us Section -->
+      <section id="joinus" class="join-us">
+        <h1 class="join-heading">Join Us</h1>
+        <p class="join-paragraph">
+          Do you have a passion for travel and adventure? We are always looking for new team members to join us on our journey. Whether you're interested in becoming a tour guide, photographer, or part of our admin team, we’d love to hear from you!
+        </p>
+        <form class="join-form center">
+          <div class="input-group">
+            <label>Full Name *</label>
+            <input
+              type="text"
+              class="join-input"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          <div class="input-groups">
+            <div class="input-group">
+              <label>Email *</label>
+              <input
+                type="email"
+                class="join-input"
+                placeholder="Enter Your Email"
               />
-              <div class="story-text">
-                <h1 class="story-heading">
-                  These were the best days of this year
-                </h1>
-                <p class="story-paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto quas, repudiandae veritatis nam mollitia cumque
-                  distinctio, quia aperiam aliquid at consequuntur libero
-                  quisquam facilis laborum inventore repellat perspiciatis vel
-                  fugiat molestias recusandae eum necessitatibus quo possimus
-                  aspernatur? Nobis, architecto eaque.
-                </p>
-              </div>
+            </div>
+            <div class="input-group">
+              <label>Phone</label>
+              <input
+                type="text"
+                class="join-input"
+                placeholder="Enter Phone Number"
+              />
             </div>
           </div>
-          <div class="story-bg">
-            <div class="story">
-              <img
-                src="images/story-img-2.jpg"
-                alt="Customer image"
-                class="story-image"
-              />
-              <div class="story-text">
-                <h1 class="story-heading">I enjoyed this great tour</h1>
-                <p class="story-paragraph">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Architecto quas, repudiandae veritatis nam mollitia cumque
-                  distinctio, quia aperiam aliquid at consequuntur libero
-                  quisquam facilis laborum inventore repellat perspiciatis vel
-                  fugiat molestias recusandae eum necessitatibus quo possimus
-                  aspernatur? Nobis, architecto eaque.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          <br>
+          <input type="submit" value="Submit" class="form-btn" />
+        </form>
       </section>
-      <!-- End of Stories -->
+      <!-- End of Join Us -->
 
       <!-- Contact -->
-      <section class="contact">
+      <section id="contact" class="contact">
         <h1 class="contact-heading">Contact Us</h1>
         <form class="contact-form center">
           <div class="input-group">
@@ -228,11 +234,12 @@
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-list">
-          <a href="#" class="footer-link">Home</a>
-          <a href="#" class="footer-link">Tours</a>
-          <a href="#" class="footer-link">About Us</a>
-          <a href="#" class="footer-link">Offer</a>
-          <a href="#" class="footer-link">Contact</a>
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#tours" class="footer-link">Tours</a>
+          <a href="#about" class="footer-link">About Us</a>
+          <a href="#offer" class="footer-link">Offer</a>
+          <a href="#joinus" class="footer-link">Join Us</a>
+          <a href="#contact" class="footer-link">Contact</a>
         </div>
         <p class="footer-paragraph">
           Copyright &copy; CodeAndCreate All Rights Reserved
@@ -240,6 +247,11 @@
       </footer>
       <!-- End of Footer -->
     </div>
+
+    <!-- Bootstrap JS & Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
